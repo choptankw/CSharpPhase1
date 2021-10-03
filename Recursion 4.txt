@@ -1,0 +1,30 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            string s = Console.ReadLine();
+            Function(s, 0, s.Length - 1);
+        }
+
+        static bool Function(string s, int a, int b)
+        {
+            if (a == b)
+            {;
+                return true;
+            }
+            else if (s[a] != s[b])
+            {
+                return false;
+            }
+            else
+            {
+                return Function(s, a + 1, b - 1);
+                return true;
+            }
+        }
+    }
+}

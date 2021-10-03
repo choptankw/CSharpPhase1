@@ -1,0 +1,65 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int[,] arr = new int[n, n];
+            int count = 0;
+            int a = 0, b = 0;
+
+            Arr(out arr, n);
+            AB(out a, out b);
+            
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (arr[i, j] >= a || arr[i, j] <= b)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            int[] arr2 = new int[n - count];
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (arr[i, j] !>= a || arr[i, j] !<= b)
+                        continue;
+                    arr2[j] = arr[i, j];
+                    ArrPrint(arr2[j]);
+                }
+            }
+        }
+
+        static void Arr(out int[,] arr0, int n)
+        {
+            int[,] arr = new int[n, n];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    arr[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            arr0 = arr;
+        }
+        static void AB(out int a, out int b)
+        {
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+        }
+        static void ArrPrint(int n)
+        {
+            Console.Write(" {0}", n);
+        }
+    }
+}

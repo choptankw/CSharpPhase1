@@ -1,0 +1,49 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            int a;
+            int count = 0;
+            
+            for (int i = 0; i < n; i++)
+            {
+                Meth(out a);
+                arr[i] = a;   
+                if (arr[i] < 0)
+                {
+                    count++;
+                }
+            }
+
+            int[] arr2 = new int[count];
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] >= 0)
+                    continue;
+                    
+                for (int j = 0; j < n; j++)
+                {
+                    arr2[j] = arr[i];
+                    ArrMeth(arr2[j]);
+                    break;
+                }
+            }
+        }
+
+        static void Meth(out int a)
+        {
+            a = int.Parse(Console.ReadLine());
+        }
+
+        static void ArrMeth(int c)
+        {
+            Console.Write(" {0}", c);
+        }
+    }
+}

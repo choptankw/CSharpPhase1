@@ -1,0 +1,22 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int input = int.Parse(Console.ReadLine());
+            Function(input);
+        }
+
+        static void Function(int n)
+        {
+            if (n == 0)
+                return;
+
+            Console.Write('*');
+            Function(n - 1);
+        }
+    }
+}

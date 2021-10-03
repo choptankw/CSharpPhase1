@@ -1,0 +1,29 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine(Abc(a));
+        }
+
+        static char Abc (int a)
+        {
+            int a3 = a % 10;
+            int a2 = (a % 100 - a3) / 10;
+            int a1 = (a % 1000 - 10 * a2 - a3) / 100;
+            int a0 = a / 1000;
+            char y;
+
+            if (a3 + a2 == 5)
+                y = 's';
+            else
+                y = 'd';
+
+            return y;
+        }
+    }
+}

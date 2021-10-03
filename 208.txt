@@ -1,0 +1,34 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine(Abc(a));
+        }
+
+        static bool Abc (int a)
+        {
+            bool t = true;
+            int x = a % 10;
+            while (a >= 10)
+            {
+                if (a % 10 != x)
+                {
+                    t = false;
+                    break;
+                }
+                a /= 10;
+            }
+            if (a % 10 != x)
+            {
+                t = false;
+            }
+
+            return t;
+        }
+    }
+}

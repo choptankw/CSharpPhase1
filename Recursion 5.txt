@@ -1,0 +1,25 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            Function(a, b);
+        }
+
+        static void Function(int a, int b)
+        {
+            if (a <= b)
+            {
+                Console.Write(a);
+                Function(a + 1, b);
+            }
+            else
+                return;
+        }
+    }
+}

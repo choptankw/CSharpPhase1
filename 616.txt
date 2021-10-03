@@ -1,0 +1,40 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            int a;
+            int sum = 0;
+            int count = 0;
+            
+            for (int i = 0; i < n; i++)
+            {
+                Meth(out a);
+                arr[i] = a;
+                if (arr[i] > 0)
+                {
+                    sum += arr[i];
+                    count++;
+                }
+            }
+
+            Console.WriteLine(Sum(sum, count));
+        }
+
+        static void Meth(out int a)
+        {
+            a = int.Parse(Console.ReadLine());
+        }
+
+        static int Sum(int sum = 0, int count = 0)
+        {
+            return sum / count;
+        }
+        
+    }
+}

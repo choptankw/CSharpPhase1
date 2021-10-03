@@ -1,0 +1,31 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine(Abc(a));
+        }
+
+        static int Abc (int a)
+        {
+            int sum = 1;
+
+            while (a >= 10)
+            {
+                while (a / 10 != 0)
+                {
+                    sum = sum * (a % 10);
+                    a /= 10;
+                }
+                if (a / 10 == 0)
+                    sum *= a;
+            }
+
+            return sum;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int[] arr = new int[] { 0, 4, 3, 44 };
+            Function(arr);
+        }
+
+        static void Function(int[] arr, int i = 0)
+        {
+            if (i < arr.Length)
+                Console.Write(arr[i]);
+            Function(arr, i + 1);
+        }
+    }
+}

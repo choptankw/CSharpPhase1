@@ -1,0 +1,44 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine(Abc(a));
+        }
+
+        static int Abc (int a)
+        {
+            int a3 = a % 10;
+            int a2 = (a % 100 - a3) / 10;
+            int a1 = (a - 10 * a2 - a3) / 100;
+            int tmp = 0;
+
+            if (a3 < a2)
+            {
+                tmp = a2;
+                a2 = a3;
+                a3 = tmp;
+            }
+
+            if (a3 < a1)
+            {
+                tmp = a1;
+                a1 = a3;
+                a3 = tmp;
+            }
+
+            if (a2 < a1)
+            {
+                tmp = a1;
+                a1 = a2;
+                a2 = tmp;
+            }
+
+            return a1 * 100 + a2 * 10 + a3;
+        }
+    }
+}

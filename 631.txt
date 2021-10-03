@@ -1,0 +1,46 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int[,] arr = new int[n, n];
+
+            Arr(out arr, n);
+            Console.WriteLine(Max(arr, n));
+        }
+
+        static void Arr(out int[,] arr0, int n)
+        {
+            int[,] arr = new int[n, n];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    arr[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            arr0 = arr;
+        }
+
+        static int Max(int[,] arr, int n)
+        {
+            int max = 0;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (i < j || arr[i, j] > max)
+                    {
+                        max = arr[i, j];
+                    }
+                }
+            }
+            return max;
+        }
+    }
+}

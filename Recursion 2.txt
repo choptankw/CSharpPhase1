@@ -1,0 +1,21 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int input = int.Parse(Console.ReadLine());
+            Console.WriteLine(Function(input));
+        }
+
+        static int Function(int n)
+        {
+            if (n == 1)
+                return 5;
+            else
+                return 5 * n + Function(n - 1);
+        }
+    }
+}

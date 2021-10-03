@@ -1,0 +1,25 @@
+using System;
+
+namespace HelloApp
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            Console.Write(Function(a));
+        }
+
+        static int Function(int a)
+        {
+            if (a / 10 != 0)
+            {
+                return a % 10 + Function(a / 10);
+            }
+            else if (a > 0 || a / 10 == 0)
+                return a;
+            else
+                return 0;
+        }
+    }
+}
