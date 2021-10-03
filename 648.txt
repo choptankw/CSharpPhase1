@@ -1,0 +1,29 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string n = Console.ReadLine();
+            bool t = false;
+            int count = 0;
+
+            for (int i = 0; i < n.Length; i++)
+            {
+                if (n[i] == 'x')
+                {
+                    t = true;
+                }    
+
+                if (t == true && n[i] == '0')
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine(count);
+        }
+    }
+}

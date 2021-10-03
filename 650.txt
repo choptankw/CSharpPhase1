@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string n = Console.ReadLine();
+            string n1 = Console.ReadLine();
+            int count = 0;
+
+            foreach (int item0 in n)
+            {
+                foreach (int item in n1)
+                {
+                    if (item0 == item)
+                    {
+                        count++;
+                        break;
+                    }
+                }
+            }
+
+            Console.WriteLine(count);
+        }
+    }
+}

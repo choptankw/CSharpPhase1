@@ -1,0 +1,32 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int m = int.Parse(Console.ReadLine());
+            int[,] arr = new int[m, m];
+            decimal[] B = new decimal[2 * m];
+
+            for (int i = 0; i < m; i++)
+            {
+                int prod = 1;
+
+                for (int j = 0; j < m; j++)
+                {
+                    arr[i, j] = int.Parse(Console.ReadLine());
+
+                    if (arr[i, j] % 2 == 0)
+                        prod *= (arr[i, j] * arr[i, j]);
+                }
+
+                B[i] = (decimal)prod;
+            }
+
+            foreach (int item in B)
+                Console.Write(item + " ");
+        }
+    }
+}

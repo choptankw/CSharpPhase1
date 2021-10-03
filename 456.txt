@@ -1,0 +1,32 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int m = int.Parse(Console.ReadLine());
+            int[,] arr = new int[m, m];
+            decimal[] B = new decimal[2 * m];
+
+            for (int i = 0; i < m; i++)
+            {
+                int sum = 0;
+
+                for (int j = 0; j < m; j++)
+                {
+                    arr[i, j] = int.Parse(Console.ReadLine());
+
+                    if (arr[i, j] > 0)
+                        sum++;
+                }
+
+                B[i] = (decimal)sum;
+            }
+
+            foreach (int item in B)
+                Console.Write(item + " ");
+        }
+    }
+}

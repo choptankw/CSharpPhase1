@@ -1,0 +1,34 @@
+using System;
+using System.Text;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StringBuilder s = new StringBuilder();
+            string line = Console.ReadLine();
+
+            for (int i = 0; i < line.Length; i++)
+            {
+                bool t = true;
+
+                for (int j = 0; j < line.Length; j++)
+                {
+                    if (i == j)
+                        continue;
+
+                    if (line[i] == line[j])
+                        t = false;
+                }
+
+                if (t)
+                    s.Append(line[i]);
+            }
+
+            string s1 = s.ToString();
+            Console.WriteLine(s1);
+        }
+    }
+}

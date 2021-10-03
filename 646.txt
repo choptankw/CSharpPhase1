@@ -1,0 +1,23 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string n = Console.ReadLine();
+            int count = 0;
+
+            for (int i = 0; i < n.Length; i++)
+            {
+                if (n[i] == 'a')
+                {
+                    count++;
+                }    
+            }
+
+            Console.WriteLine(count);
+        }
+    }
+}
