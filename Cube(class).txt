@@ -1,0 +1,27 @@
+using System;
+
+namespace HelloApp
+{
+    public class cube
+    {
+        public int side = int.Parse(Console.ReadLine());
+
+        public void cubeInfo(int a)
+        {
+            int bottomArea = a * a;
+            int volume = a * a * a;
+
+            Console.WriteLine($"Side is {a}cm\nVolume is {volume}cm3\n Bottom Area is {bottomArea}cm2");
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            cube a = new cube();
+
+            a.cubeInfo(a.side);
+        }
+    }
+}

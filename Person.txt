@@ -1,0 +1,62 @@
+using System;
+
+namespace HelloApp
+{
+   public class Person
+    {
+        public string name;
+        public string surname;
+        public byte age;
+
+        public void ShowPersonInfo(string name, string surname, byte age)
+        {
+            Console.WriteLine($"{name} {surname} is {age} years old");
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Person info = new Person();
+
+            info.name = Console.ReadLine();
+            info.surname = Console.ReadLine();
+            info.age = byte.Parse(Console.ReadLine());
+
+            info.ShowPersonInfo(info.name, info.surname, info.age);
+        }
+    }
+}
+
+
+using System;
+
+namespace HelloApp
+{
+   public struct Person
+    {
+        public string name;
+        public string surname;
+        public byte age;
+
+        public void ShowPersonInfo(string name, string surname, byte age)
+        {
+            Console.WriteLine($"{name} {surname} is {age} years old");
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Person info = new Person();
+
+            info.name = Console.ReadLine();
+            info.surname = Console.ReadLine();
+            info.age = byte.Parse(Console.ReadLine());
+
+            info.ShowPersonInfo(info.name, info.surname, info.age);
+        }
+    }
+}

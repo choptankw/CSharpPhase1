@@ -1,0 +1,35 @@
+using System;
+
+namespace HelloApp
+{
+    public struct square
+    {
+        public int side;
+
+        public void squareInfo(int a)
+        {
+            Console.WriteLine($"Side is {a}");
+            Console.WriteLine($"Area is {a * a}");
+
+            for (int i = 0; i < a; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < a; j++)
+                {
+                    Console.Write("* ");
+                }
+            }
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            square a = new square();
+
+            a.side = int.Parse(Console.ReadLine());
+            a.squareInfo(a.side);
+        }
+    }
+}

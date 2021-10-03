@@ -1,0 +1,81 @@
+using System;
+
+namespace HelloApp
+{
+    public class Student
+    {
+        public string name;
+        public string surName;
+        public int age;
+        public int grade;
+        public int course;
+        public Student(string name, string surName, int age, int grade, int course)
+        {
+            this.name = name;
+            this.surName = surName;
+            this.age = age;
+            this.grade = grade;
+            this.course = course;
+        }
+
+        public void info()
+        {
+            Console.WriteLine($"{name} {surName}");
+        }
+
+        public void lastCourseStudents(int _course)
+        {
+            if (course == 4)
+                Console.WriteLine($"{name} ({age} years old)");
+        }
+    }
+   
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Student student1 = new Student("Vahan", "Hakobjanyan", 23, 7, 2);
+            Student student2 = new Student("Tigran", "Hovsepyan", 24, 9, 2);
+            Student student3 = new Student("Vahe", "Exyan", 24, 10, 3);
+            Student student4 = new Student("Martun", "Rafaelyan", 20, 5, 4);
+            Student student5 = new Student("Vahagn", "Hovhannesyan", 22, 8, 4);
+            Student[] studentArray = new Student[] { student1, student2, student3, student4, student5};
+            int sum = 0;
+            Student HighestGradeStudent = student1;
+
+            for (int i = 0; i < 5; i++)
+            {
+                studentArray[i].info();
+                sum += studentArray[i].grade;
+                if (studentArray[i].grade > HighestGradeStudent.grade)
+                {
+                    HighestGradeStudent = studentArray[i];
+                }
+            }
+
+            Console.WriteLine("\nMiddle grade is {0}", sum / 5);
+            Console.WriteLine("\nHigest grade student is {0} {1}", HighestGradeStudent.name, HighestGradeStudent.surName);
+
+            Console.WriteLine("\nAll students in last course are`");
+            for (int i = 0; i < 5; i++)
+            {
+                studentArray[i].lastCourseStudents(studentArray[i].course);
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (studentArray[i].course == 2)
+                {
+                    Console.WriteLine($"{studentArray[i].name} {studentArray[i].surName}");
+                    if (studentArray[i].grade > 9)
+                        Console.Write("  Gerazancik");
+                    else if (studentArray[i].grade < 7)
+                        Console.Write("  Mijak");
+                    else
+                        Console.Write("  Harvacayin");
+                }
+            }
+        }
+    }
+}

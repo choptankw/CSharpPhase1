@@ -1,0 +1,58 @@
+using System;
+
+namespace HelloApp
+{
+    public class Author
+    {
+        private string name;
+        private string email;
+        private string gender;
+
+        public Author(string name, string email, string gender)
+        {
+            this.name = name;
+            this.email = email;
+            this.gender = gender;
+        }
+
+        public string nameSetGet
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
+        public string emailSetGet
+        {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                email = value;
+            }
+        }
+
+        public string GenderGet
+        {
+            get
+            {
+                return gender;
+            }
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+                Author x = new Author("Thomas", "thm@gmail.com", "Male");
+        }
+    }
+}

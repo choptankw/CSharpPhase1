@@ -1,0 +1,52 @@
+using System;
+
+namespace HelloApp
+{
+    public class Count
+    {
+        public int square (int a)
+        {
+            return a * a;
+        }
+        public int square (int a, int b)
+        {
+            return a * b;
+        }
+        public int square (int a, int b, int c)
+        {
+            int r = (a + b + c) / 2;
+            return (int)Math.Sqrt(r * (r - a) * (r - b) * (r - c));
+        }
+        public int square (int a, int b, int c, int d)
+        {
+            return a + b + c + d;
+        }
+        public int counts (int a, int b)
+        {
+            return a * a - b * b;
+        }
+        public int counts (int a, int b, int c)
+        {
+            return a * a + b * b + c * c;
+        }
+        public int counts (int a, int b, int c, int d)
+        {
+            return (a + b + c + d) / 4;
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Count a = new Count();
+            Console.WriteLine(a.square(4));
+            Console.WriteLine(a.square(4, 5));
+            Console.WriteLine(a.square(4, 5, 6));
+            Console.WriteLine(a.square(4, 5, 6, 7));
+            Console.WriteLine(a.counts(4, 5));
+            Console.WriteLine(a.counts(4, 5, 6));
+            Console.WriteLine(a.counts(4, 5, 6, 7));
+        }
+    }
+}

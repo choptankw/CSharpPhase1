@@ -1,0 +1,32 @@
+using System;
+
+namespace HelloApp
+{
+   public struct Car
+    {
+        public string manufacturer;
+        public string model;
+        public int releaseDate;
+        public string engine;
+
+        public void ShowCarInfo(string manufacturer, string model, string engine, int releaseDate)
+        {
+            Console.WriteLine($"{manufacturer} {model} released in {releaseDate} and has {engine} engine");
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Car carInfo = new Car();
+
+            carInfo.manufacturer = "Ford";
+            carInfo.model = "Mustang Bullit";
+            carInfo.releaseDate = 2019;
+            carInfo.engine = "5.0L V8 480HP";
+
+            carInfo.ShowCarInfo(carInfo.manufacturer, carInfo.model, carInfo.engine, carInfo.releaseDate);
+        }
+    }
+}

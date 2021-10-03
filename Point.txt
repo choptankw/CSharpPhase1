@@ -1,0 +1,48 @@
+using System;
+
+namespace HelloApp
+{
+    public class point
+    {
+        public void ShowXY(int x, int y)
+        {
+            Console.WriteLine($"X = {x}\nY = {y}");
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+            point point = new point();
+            point.ShowXY(x, y);
+        }
+    }
+}
+
+
+using System;
+
+namespace HelloApp
+{
+    public struct point
+    {
+        public void ShowXY(int x, int y)
+        {
+            Console.WriteLine($"X = {x}\nY = {y}");
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+            point point = new point();
+            point.ShowXY(x, y);
+        }
+    }
+}

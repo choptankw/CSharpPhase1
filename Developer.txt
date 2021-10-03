@@ -1,0 +1,54 @@
+using System;
+
+namespace HelloApp
+{
+    public enum ProgrammingLanguages
+    {
+        frontEnd = 1,
+        backEnd,
+        fullStack,
+    }
+    public class Developer
+    {
+        public string name;
+        public string surname;
+        public byte age;
+        public byte experience;
+        public ProgrammingLanguages languages = new ProgrammingLanguages();
+
+        public void info()
+        {
+            Console.WriteLine($"{name} {surname} - {languages}");
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Developer dev1 = new Developer();
+            dev1.name = "Tom"; dev1.surname = "Hopper"; dev1.age = 35; dev1.experience = 8; dev1.languages = ProgrammingLanguages.backEnd;
+            Developer dev2 = new Developer();
+            dev2.name = "Jake"; dev2.surname = "Paul"; dev2.age = 23; dev2.experience = 2; dev2.languages = ProgrammingLanguages.frontEnd;
+            Developer dev3 = new Developer();
+            dev3.name = "David"; dev3.surname = "Spade"; dev3.age = 30; dev3.experience = 5; dev3.languages = ProgrammingLanguages.frontEnd;
+            Developer dev4 = new Developer();
+            dev4.name = "Lilith"; dev4.surname = "Jenkins"; dev4.age = 33; dev4.experience = 3; dev4.languages = ProgrammingLanguages.backEnd;
+            Developer dev5 = new Developer();
+            dev5.name = "Howard"; dev5.surname = "Pitt"; dev5.age = 40; dev5.experience = 15; dev5.languages = ProgrammingLanguages.fullStack;
+            Developer[] devArr = new Developer[] { dev1, dev2, dev3, dev4, dev5 };
+
+            int count = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                devArr[i].info();
+                if (devArr[i].languages == ProgrammingLanguages.backEnd || devArr[i].languages == ProgrammingLanguages.fullStack)
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine($"Developer who can do C# - {count}");
+        }
+    }
+}

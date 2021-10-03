@@ -1,0 +1,26 @@
+using System;
+
+namespace HelloApp
+{
+   public class Car
+    {
+        public string manufacturer = "Ford";
+        public string model = "Mustang Bullit";
+        public int releaseDate = 2019;
+        public string engine = "5.0L V8 480HP";
+
+        public void ShowCarInfo(string manufacturer, string model, string engine, int releaseDate)
+        {
+            Console.WriteLine($"{manufacturer} {model} released in {releaseDate} and has {engine} engine");
+        }
+    }
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Car carInfo = new Car();
+            carInfo.ShowCarInfo(carInfo.manufacturer, carInfo.model, carInfo.engine, carInfo.releaseDate);
+        }
+    }
+}
