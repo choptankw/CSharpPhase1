@@ -1,0 +1,31 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            int d = int.Parse(Console.ReadLine());
+            int h = 0;
+
+            if (a % 2 == 1)
+                h++;
+            if (b % 2 == 1)
+                h++;
+            if (c % 2 == 1)
+                h++;
+            if (d % 2 == 1)
+                h++;
+
+            if (h >= 2)
+                Console.WriteLine("1");
+            else
+                Console.WriteLine("2");
+
+        }
+    }
+}

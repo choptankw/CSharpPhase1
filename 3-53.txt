@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+
+            int a3 = a % 10;
+            int a2 = (a % 100 - a3) / 10;
+            int a1 = (a - 10 * a2 - a3) / 100;
+
+            if (k < a)
+                Console.WriteLine(a / (a1 + a2 + a3));
+            else
+                Console.WriteLine(a3 / a);
+        }
+    }
+}

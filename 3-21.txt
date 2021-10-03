@@ -1,0 +1,19 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+
+            int max = a > b ? a : b;
+            max = c > max ? c : max;
+
+            Console.WriteLine("MAX = {0}", max);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+
+            bool d = false;
+
+            if ((a == 2 && b == 2) || (a == 2 && c == 2) || (b == 2 && c == 2))
+            {
+                d = true;
+            }
+
+            Console.WriteLine(d);
+        }
+    }
+}

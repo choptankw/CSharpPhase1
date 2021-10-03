@@ -1,0 +1,51 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            int d = int.Parse(Console.ReadLine());
+
+            int min1 = a < b ? a : b;
+            int min2 = c < d ? c : d;
+            int min = min1 < min2 ? min1 : min2;
+
+            int max1 = a > b ? a : b;
+            int max2 = c > d ? c : d;
+            int max = max1 > max2 ? max1 : max2;
+
+            int mid1 = 0;
+            if (a < max && a > min)
+                mid1 = a;
+            else if (b < max && b > min)
+                mid1 = b;
+            else if (c < max && c > min)
+                mid1 = c;
+            else
+                mid1 = d;
+
+            int mid2 = a + b + c + d - min - max - mid1;
+
+            int midmin = 0, midmax = 0;
+            if (mid1 > mid2)
+            {
+                midmax = mid1; midmin = mid2;
+            }
+            else
+            {
+                midmax = mid2; midmin = mid1;
+            }
+
+            int x = max - midmax;
+            if ((midmax - midmin == x) && (midmin - min == x))
+                Console.WriteLine("true");
+            else
+                Console.WriteLine("false");
+        }
+    }
+}

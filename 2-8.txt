@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 15;
+            int b = 20;
+
+            Console.WriteLine("A = {0}, B = {1}", a, b);
+
+            a = a + b;
+            b = -(b - a);
+            a = a - b;
+
+            Console.WriteLine("A = {0}, B = {1}", a, b);
+
+        }
+    }
+}

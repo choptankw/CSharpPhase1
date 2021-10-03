@@ -1,0 +1,18 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+
+            bool d = a == 1 || b == 1 || c == 1 ? true : false;
+
+            Console.WriteLine(d);
+        }
+    }
+}
