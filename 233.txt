@@ -1,0 +1,30 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0;
+            int prod = 1;
+            int[] arr = new int[6];
+            
+            for (int i = 0; i < 6; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine()); 
+            }
+
+            foreach (int item in arr)
+            {
+                if (item % 2 == 0)
+                {
+                    sum += item;
+                    prod *= item;
+                }
+            }
+
+            Console.WriteLine("{0}, {1}", prod, sum);
+        }
+    }
+}

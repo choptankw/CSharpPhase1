@@ -1,0 +1,25 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 100; i <= 999; i++)
+            {
+                int i1 = (int)Math.Sqrt(i);
+                if (i / i1 == i1)
+                {
+                    if (i1 > n)
+                    {
+                        Console.WriteLine(i);
+                        break;
+                    }   
+                }
+            }
+        }
+    }
+}

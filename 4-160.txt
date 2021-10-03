@@ -1,0 +1,20 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 100; i <= 999; i++)
+            {
+                int i1 = (int)Math.Sqrt(i * 16);
+                if (i1 * i1 == i * 16)
+                {
+                    Console.WriteLine(i);
+                    break;
+                }
+            }
+        }
+    }
+}

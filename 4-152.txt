@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+
+            int prod = a;
+
+            for (int i = 1; i <= a/2; i++)
+            {
+                if (a % i == 0)
+                    prod *= i;
+            }
+
+            Console.WriteLine(prod);
+        }
+    }
+}

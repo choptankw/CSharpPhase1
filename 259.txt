@@ -1,0 +1,29 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = { 3, 5, 4, 6, 1, 6 };
+            int min = arr[0];
+
+            foreach (int item in arr)
+            {
+               
+                if (item < min) 
+                    min = item;
+            }
+
+            for (int i = 0; i < 6; i++)
+            {
+                if (arr[i] == min)
+                {
+                    Console.WriteLine(i);
+                    break;
+                }
+            }
+        }
+    }
+}

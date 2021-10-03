@@ -1,0 +1,26 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr;
+            arr = new int[10];
+            int prod = 1;
+
+            for (int i = 0; i < 10; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+
+                if (i % 2 != 0)
+                {
+                    prod *= (arr[i] * arr[i]);
+                }
+            }
+
+            Console.WriteLine(prod);
+        }
+    }
+}

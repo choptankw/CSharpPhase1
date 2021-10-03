@@ -1,0 +1,33 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool t = false;
+            int n = int.Parse(Console.ReadLine());
+            if (n == 1)
+                Console.WriteLine("true");
+            int prod = 1;
+
+            for (int i = 1; i <= n / 3; i++)
+            {
+                prod *= 3;
+
+                if (prod == n)
+                {
+                    t = true;
+                    Console.WriteLine(t);
+                    break;
+                }
+                else if (prod > n)
+                {
+                    Console.WriteLine(t);
+                    break;
+                }
+            }
+        }
+    }
+}

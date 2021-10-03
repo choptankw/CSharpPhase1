@@ -1,0 +1,29 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int t = int.Parse(Console.ReadLine());
+            int sum = 0;
+            int[] arr = new int[6];
+            
+            for (int i = 0; i < 6; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine()); 
+            }
+
+            foreach (int item in arr)
+            {
+                if (item % t == 0)
+                {
+                    sum++;
+                }
+            }
+
+            Console.WriteLine(sum);
+        }
+    }
+}

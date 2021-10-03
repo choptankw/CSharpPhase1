@@ -1,0 +1,20 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            decimal prod = 1;
+            
+            for (int i = 15; i <= 90; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                prod *= i;
+            }
+
+            Console.WriteLine(prod);
+        }
+    }
+}

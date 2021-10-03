@@ -1,0 +1,25 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+
+            int[] arr;
+            arr = new int[b - a + 1];
+
+            for (int i = a + 1; i <= b - a - 1; i++)
+            {
+                arr[i] = a + i + 1;
+                count++;
+            }
+
+            Console.WriteLine(count);
+        }
+    }
+}

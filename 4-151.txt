@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+
+            int sum = a;
+
+            for (int i = 1; i <= a/2; i++)
+            {
+                if (a % i == 0)
+                    sum += i;
+            }
+
+            Console.WriteLine(sum);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long prod = 1;
+
+           for (int i = 100; i <= 999; i++)
+            {
+                if (i % 3 == 1 && i % 4 == 2)
+                {
+                    prod = prod * i;
+                }
+            }
+
+            Console.WriteLine(prod);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int count = 1;
+            int a = n;
+
+            while (a >= 10)
+            {
+                a /= 10;
+                count++;
+            }
+
+            for (int i = count; i > 0; i--)
+            {
+                int b = n / (int)Math.Pow(10, count - 1);
+                if (b < 10)
+                    Console.Write("{0} ", b);
+                else
+                {
+                    int c = b / 10;
+                    Console.Write("{0} ", b - (c * 10));
+                }
+                count--;
+            }
+        }
+    }
+}

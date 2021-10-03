@@ -1,0 +1,30 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            bool t = false;
+
+            while (n / 10 != 0)
+            {
+                if (n % 10 == 2)
+                {
+                    t = true;
+                    break;
+                }
+
+                n = n / 10;
+            }
+            if (n == 2)
+            {
+                t = true;
+            }
+
+            Console.WriteLine(t);
+        }
+    }
+}

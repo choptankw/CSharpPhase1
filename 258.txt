@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = { 3, 6, 4, 6, 1, 0 };
+            int max = arr[0];
+            
+            foreach (int item in arr)
+            {
+                if (item > max) 
+                    max = item;
+            }
+
+            for (int i = 5; i >= 0; i--)
+            {
+                if (arr[i] == max)
+                {
+                    Console.WriteLine(i);
+                    break;
+                }
+            }
+        }
+    }
+}

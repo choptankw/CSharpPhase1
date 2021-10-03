@@ -1,0 +1,26 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr;
+            arr = new int[10];
+            int sum = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+
+                if (i % 2 != 0)
+                {
+                    sum += Math.Abs(arr[i]);
+                }
+            }
+
+            Console.WriteLine(sum);
+        }
+    }
+}
